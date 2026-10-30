@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Dabah | Software Engineer</title>
+  <meta name="description" content="Portfolio of Eng. Mohamed Dabah — Senior Software Engineer crafting high-performance full-stack applications and scalable systems.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts: Inter + IBM Plex Sans Arabic for authentic typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN for instant zero-config rendering -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: '#07090e',
+            slate: {
+              850: '#111726',
+              950: '#07090e'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            arabic: ['"IBM Plex Sans Arabic"', '"Cairo"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+
+  <!-- Background decorative glow effects -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="blueprint-overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark/80 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Name -->
+      <a href="#home" class="group flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+            <span class="font-mono font-bold text-sm text-emerald-400">&lt;MD/&gt;</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-white text-base tracking-tight group-hover:text-emerald-400 transition" data-i18n="nav.name">Mohamed Dabah</span>
+          <span class="text-[11px] font-mono text-slate-400" data-i18n="nav.title">Software Engineer</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-emerald-400 transition" data-i18n="nav.services">Services</a>
+        <a href="#estimator" class="hover:text-emerald-400 transition" data-i18n="nav.estimator">Estimator</a>
+        <a href="#certificates" class="hover:text-emerald-400 transition" data-i18n="nav.certificates">Certificates</a>
+        <a href="#skills" class="hover:text-emerald-400 transition" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" class="hover:text-emerald-400 transition" data-i18n="nav.projects">Projects</a>
+        <a href="#articles" class="hover:text-emerald-400 transition" data-i18n="nav.articles">Insights</a>
+        <a href="#contact" class="hover:text-emerald-400 transition" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Language Switcher Button -->
+        <button id="langToggleBtn" class="lang-switch-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-900/80 text-xs font-semibold text-slate-200 hover:border-emerald-500/50 hover:text-white transition">
+          <span class="text-sm">🌐</span>
+          <span id="langLabel">العربية</span>
+        </button>
+
+        <!-- Let's Talk CTA -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs md:text-sm shadow-md shadow-emerald-500/20 transition hover:-translate-y-0.5">
+          <span data-i18n="nav.cta">Let's Talk</span>
+          <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-slate-950/95 border-b border-slate-800 space-y-3 text-sm">
+      <a href="#services" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.services">Services</a>
+      <a href="#estimator" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.estimator">Estimator</a>
+      <a href="#certificates" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.certificates">Certificates</a>
+      <a href="#skills" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.projects">Projects</a>
+      <a href="#articles" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.articles">Insights</a>
+      <a href="#contact" class="block py-2 text-slate-300 hover:text-emerald-400 mobile-link" data-i18n="nav.contact">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="block text-center w-full py-2.5 rounded-lg bg-emerald-500 text-slate-950 font-bold mobile-link" data-i18n="nav.cta">Let's Talk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-12 pb-20 md:pt-20 md:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text Column -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs font-medium text-slate-300">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span data-i18n="hero.status">Available for new opportunities & freelance projects</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <span data-i18n="hero.greeting">Crafting Scalable</span>
+          <br>
+          <span class="gradient-text" data-i18n="hero.highlight">Software Systems</span>
+          <br>
+          <span data-i18n="hero.ending">&amp; Clean Code.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl" data-i18n="hero.bio">
+          I'm Mohamed Dabah, a Software Engineer dedicated to architecting reliable backend services, intuitive frontend architectures, and high-impact digital products designed to scale smoothly.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 flex items-center gap-2">
+            <span data-i18n="hero.viewWork">Explore Selected Work</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </a>
+          
+          <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 hover:border-slate-500 transition hover:-translate-y-0.5 flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+            <span data-i18n="hero.getInTouch">Get In Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Channels / Quick Reach -->
+        <div class="flex flex-wrap items-center gap-4 pt-4 text-slate-400 text-sm">
+          <span class="text-xs font-mono uppercase tracking-wider text-slate-500" data-i18n="hero.socialTitle">Direct Links:</span>
+          <a href="https://github.com/mohameddabah769-debug" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1 font-mono text-xs">
+            <span>GitHub</span> ↗
+          </a>
+          <a href="https://www.linkedin.com/in/mohamed-mustafa-8a9042445" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1 font-mono text-xs">
+            <span>LinkedIn</span> ↗
+          </a>
+          <a href="https://www.facebook.com/share/1BxWP3y3ST/" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1 font-mono text-xs">
+            <span>Facebook</span> ↗
+          </a>
+          <a href="https://wa.me/201095744676" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1 font-mono text-xs text-emerald-400 font-semibold">
+            <span>WhatsApp</span> ↗
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Visual Code & Architecture Card with Personal Photo (Aisaa Dribbble Style) -->
+      <div class="lg:col-span-5 space-y-4">
+        
+        <!-- Profile Photo & Identity Banner -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/90 p-5 backdrop-blur-xl shadow-2xl flex items-center gap-5">
+          <div class="relative shrink-0">
+            <img src="assets/images/profile.jpg" 
+                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2258%22 font-family=%22sans-serif%22 font-size=%2232%22 font-weight=%22bold%22 fill=%22%2310b981%22 text-anchor=%22middle%22>MD</text></svg>';" 
+                 alt="Eng. Mohamed Dabah" 
+                 class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover object-top border-2 border-emerald-500/50 shadow-xl shadow-emerald-500/15">
+            <span class="absolute -bottom-1 -right-1 rtl:-right-auto rtl:-left-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900" title="Active & Available"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-white text-lg truncate" data-i18n="nav.name">Mohamed Dabah</h3>
+              <span class="text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 font-mono">Eng.</span>
+            </div>
+            <p class="text-xs text-slate-400 font-mono mt-1" data-i18n="nav.title">Full-Stack Software Engineer</p>
+            <div class="flex flex-wrap items-center gap-2 mt-2.5 text-xs text-slate-300">
+              <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span data-i18n="hero.availableBadge">Available for Hire</span>
+              </span>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400 font-mono text-[11px]">+4 Years Exp.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Window -->
+        <div class="tech-window rounded-2xl border border-slate-800 bg-slate-900/90 shadow-2xl p-5 backdrop-blur-xl relative overflow-hidden">
+          
+          <!-- Card Header Bar -->
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-slate-500">engineer.config.ts</span>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono">v3.2 active</span>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="py-4 font-mono text-xs leading-relaxed space-y-1.5 text-slate-300">
+            <div class="text-slate-500">// Engineering profile declaration</div>
+            <div>
+              <span class="text-indigo-400">const</span> <span class="text-amber-300">engineer</span> = {
+            </div>
+            <div class="pl-4">
+              <span class="text-slate-400">name:</span> <span class="text-emerald-300">'Mohamed Dabah'</span>,
+            </div>
+            <div class="pl-4">
+              <span class="text-slate-400">title:</span> <span class="text-emerald-300">'Software Engineer'</span>,
+            </div>
+            <div class="pl-4">
+              <span class="text-slate-400">coreFocus:</span> [
+            </div>
+            <div class="pl-8 text-sky-300">
+              'Scalable Backend Architecture',<br>
+              'Full-Stack Web Engineering',<br>
+              'Cloud & Microservices'
+            </div>
+            <div class="pl-4">],</div>
+            <div class="pl-4">
+              <span class="text-slate-400">status:</span> <span class="text-emerald-400 font-bold">'Ready to Build'</span>,
+            </div>
+            <div class="pl-4">
+              <span class="text-slate-400">commitment:</span> <span class="text-amber-300">'Clean code & 99.9% reliability'</span>
+            </div>
+            <div>};</div>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="mt-2 pt-4 border-t border-slate-800/80 grid grid-cols-2 gap-3 text-center">
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="block text-xl font-bold font-mono text-white">+35</span>
+              <span class="text-[11px] text-slate-400" data-i18n="hero.metric1">Projects Deployed</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="block text-xl font-bold font-mono text-emerald-400">100%</span>
+              <span class="text-[11px] text-slate-400" data-i18n="hero.metric2">On-Time Delivery</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metrics / Stats Section -->
+  <section class="border-y border-slate-800 bg-slate-950/40 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl md:text-4xl font-extrabold font-mono text-white mb-1">+4</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium" data-i18n="stats.experience">Years of Experience</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-extrabold font-mono text-emerald-400 mb-1">+35</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium" data-i18n="stats.projects">Delivered Projects</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-extrabold font-mono text-white mb-1">99.9%</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium" data-i18n="stats.reliability">Uptime &amp; Stability</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-extrabold font-mono text-amber-400 mb-1">&lt;100ms</div>
+          <div class="text-xs sm:text-sm text-slate-400 font-medium" data-i18n="stats.latency">Average API Latency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & What I Offer Section -->
+  <section id="services" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span data-i18n="services.badge">What I Offer</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="services.title">
+        Engineering Services &amp; Solutions
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="services.desc">
+        Comprehensive software solutions crafted from concept to scalable production with high code quality and security.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Service 1 -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-emerald-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          🚀
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2" data-i18n="services.s1.title">MVP to Full Production Launch</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4" data-i18n="services.s1.desc">
+          Building complete, production-grade applications from scratch. From clean system architecture and database schema design to responsive modern frontend and deployment.
+        </p>
+        <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+          <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Rapid prototyping &amp; clean scalable code</li>
+          <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Modern responsive web interfaces</li>
+          <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Production readiness on day one</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-indigo-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          🔌
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2" data-i18n="services.s2.title">APIs &amp; Microservices Integration</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4" data-i18n="services.s2.desc">
+          Designing and implementing robust RESTful and GraphQL APIs, third-party payment gateways, event-driven message queues, and seamless integrations with external services.
+        </p>
+        <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+          <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> Strict authentication (JWT / OAuth2)</li>
+          <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> High-concurrency event processing</li>
+          <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> Comprehensive API documentation</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-amber-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          ⚡
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2" data-i18n="services.s3.title">Performance &amp; Database Tuning</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4" data-i18n="services.s3.desc">
+          Pinpointing latency bottlenecks, eliminating slow queries, tuning PostgreSQL/MongoDB schemas, and setting up intelligent Redis caching to reduce load times by up to 80%.
+        </p>
+        <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+          <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Query profiling &amp; index optimization</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Redis distributed caching layers</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Core Web Vitals score maximization</li>
+        </ul>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7 hover:border-teal-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          ☁️
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2" data-i18n="services.s4.title">Software Architecture &amp; DevOps</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4" data-i18n="services.s4.desc">
+          Architecture consultation, containerization with Docker, automated CI/CD pipelines, and cloud hosting setup ensuring high availability, automated backups, and security.
+        </p>
+        <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+          <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Docker container orchestration</li>
+          <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Automated GitHub Actions CI/CD</li>
+          <li class="flex items-center gap-2"><span class="text-teal-400">✓</span> Cloud infrastructure cost reduction</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Quick Call Booking CTA -->
+    <div class="mt-12 p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+          📅
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-base" data-i18n="services.ctaTitle">Need a technical consultation or project evaluation?</h4>
+          <p class="text-slate-400 text-xs sm:text-sm" data-i18n="services.ctaSub">Schedule a quick 15-min discovery call or chat directly via WhatsApp.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/201095744676?text=Hello%20Eng.%20Mohamed,%20I%20would%20like%20to%20book%20a%20consultation%20call." target="_blank" class="shrink-0 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/20 transition flex items-center gap-2">
+        <span data-i18n="services.ctaBtn">Book a 15-Min Call</span> ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- Interactive Project Cost & Scope Estimator Section -->
+  <section id="estimator" class="py-20 bg-slate-950/60 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span data-i18n="estimator.badge">Interactive Tool</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="estimator.title">
+          Project Cost &amp; Timeline Estimator
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2" data-i18n="estimator.desc">
+          Select your project requirements to calculate an estimated scope, timeline, and preliminary investment range.
+        </p>
+      </div>
+
+      <div class="rounded-3xl border border-slate-800 bg-slate-900/90 p-6 sm:p-10 shadow-2xl space-y-8">
+        
+        <!-- Step 1: Project Type -->
+        <div>
+          <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-3" data-i18n="estimator.step1">
+            1. Select Project Type
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="estimatorTypeGrid">
+            <button type="button" class="est-type-btn active p-4 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-start transition" data-type="fullstack" data-base="1200" data-weeks="4">
+              <span class="block text-sm font-bold text-white" data-i18n="estimator.t1">Full-Stack Web Application</span>
+              <span class="block text-xs text-slate-400 mt-1" data-i18n="estimator.t1Desc">Custom Frontend + Backend + Database</span>
+            </button>
+            <button type="button" class="est-type-btn p-4 rounded-xl border border-slate-800 bg-slate-950/60 text-start hover:border-slate-700 transition" data-type="api" data-base="800" data-weeks="3">
+              <span class="block text-sm font-bold text-white" data-i18n="estimator.t2">High-Performance API Backend</span>
+              <span class="block text-xs text-slate-400 mt-1" data-i18n="estimator.t2Desc">Microservices / REST / GraphQL &amp; DB</span>
+            </button>
+            <button type="button" class="est-type-btn p-4 rounded-xl border border-slate-800 bg-slate-950/60 text-start hover:border-slate-700 transition" data-type="saas" data-base="1800" data-weeks="6">
+              <span class="block text-sm font-bold text-white" data-i18n="estimator.t3">SaaS MVP Platform</span>
+              <span class="block text-xs text-slate-400 mt-1" data-i18n="estimator.t3Desc">Subscriptions, Dashboard &amp; Multi-tenancy</span>
+            </button>
+            <button type="button" class="est-type-btn p-4 rounded-xl border border-slate-800 bg-slate-950/60 text-start hover:border-slate-700 transition" data-type="audit" data-base="500" data-weeks="1">
+              <span class="block text-sm font-bold text-white" data-i18n="estimator.t4">Performance &amp; Code Audit</span>
+              <span class="block text-xs text-slate-400 mt-1" data-i18n="estimator.t4Desc">Speed optimization &amp; Architecture review</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Key Features -->
+        <div>
+          <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-3" data-i18n="estimator.step2">
+            2. Additional Features &amp; Integrations
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="estimatorFeaturesGrid">
+            <label class="est-feature-item p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 flex items-center justify-between cursor-pointer hover:border-slate-700 transition">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="est-checkbox accent-emerald-500 w-4 h-4 rounded" data-price="200" data-time="0.5" checked>
+                <span class="text-xs text-slate-200 font-medium" data-i18n="estimator.f1">User Authentication &amp; Roles</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">+$200</span>
+            </label>
+
+            <label class="est-feature-item p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 flex items-center justify-between cursor-pointer hover:border-slate-700 transition">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="est-checkbox accent-emerald-500 w-4 h-4 rounded" data-price="350" data-time="1">
+                <span class="text-xs text-slate-200 font-medium" data-i18n="estimator.f2">Payment Gateway Integration</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">+$350</span>
+            </label>
+
+            <label class="est-feature-item p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 flex items-center justify-between cursor-pointer hover:border-slate-700 transition">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="est-checkbox accent-emerald-500 w-4 h-4 rounded" data-price="300" data-time="1">
+                <span class="text-xs text-slate-200 font-medium" data-i18n="estimator.f3">Real-Time WebSockets / Chat</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">+$300</span>
+            </label>
+
+            <label class="est-feature-item p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 flex items-center justify-between cursor-pointer hover:border-slate-700 transition">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="est-checkbox accent-emerald-500 w-4 h-4 rounded" data-price="250" data-time="0.5" checked>
+                <span class="text-xs text-slate-200 font-medium" data-i18n="estimator.f4">Docker &amp; Cloud CI/CD Setup</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">+$250</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="text-center sm:text-start">
+            <span class="text-xs font-mono text-slate-400" data-i18n="estimator.resultTitle">ESTIMATED INVESTMENT &amp; TIMELINE</span>
+            <div class="flex items-baseline gap-3 mt-1 justify-center sm:justify-start">
+              <span id="estPriceDisplay" class="text-3xl font-extrabold font-mono text-emerald-400">$1,650</span>
+              <span class="text-slate-500 text-xs">/ approx.</span>
+              <span id="estTimelineDisplay" class="text-sm font-mono text-slate-300 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">~ 4.5 Weeks</span>
+            </div>
+          </div>
+
+          <a id="estWhatsAppBtn" href="https://wa.me/201095744676?text=Hello%20Eng.%20Mohamed,%20I%20used%20your%20website%20estimator%20and%20would%20like%20to%20discuss%20my%20project." target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2">
+            <span data-i18n="estimator.whatsappBtn">Discuss Scope on WhatsApp</span> ↗
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Diplomas Section -->
+  <section id="certificates" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span data-i18n="certs.badge">Verified Credentials</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="certs.title">
+        Accredited Programming Diplomas
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="certs.desc">
+        Official international and regional diplomas awarded with Grade (Excellent), validating advanced engineering proficiency in Java and Python.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Certificate 1: American Board (ABPS) -->
+      <div class="cert-card rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-emerald-500/40 transition group flex flex-col justify-between">
+        <div>
+          <div class="relative overflow-hidden cursor-pointer bg-slate-950 p-4 border-b border-slate-800" onclick="openCertModal('assets/images/cert-abps.jpg', 'American Board of Professional Studies - Programming Diploma (Java & Python)')">
+            <img src="assets/images/cert-abps.jpg" alt="American Board Diploma (Java and Python)" class="w-full h-64 object-contain rounded-xl group-hover:scale-102 transition duration-300">
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 font-bold text-xs shadow-lg flex items-center gap-2">
+                <span>🔍 View Full Certificate</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">USA Board • Excellent</span>
+              <span class="text-xs font-mono text-slate-500">70 Hours</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition" data-i18n="certs.c3.title">
+              American Board Diploma in Java &amp; Python
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="certs.c3.desc">
+              Accredited by the American Board of Professional Studies (ABPS - Wyoming, USA). Serial No: 0038513. Verified at Americanboard-us.com.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+          <span class="text-slate-400 font-mono">Issued: <strong class="text-slate-200">Jan 2026</strong></span>
+          <button onclick="openCertModal('assets/images/cert-abps.jpg', 'American Board of Professional Studies - Programming Diploma (Java & Python)')" class="text-emerald-400 hover:text-emerald-300 font-semibold font-mono">
+            Enlarge ↗
+          </button>
+        </div>
+      </div>
+
+      <!-- Certificate 2: Java (Egyptian Science House) -->
+      <div class="cert-card rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-emerald-500/40 transition group flex flex-col justify-between">
+        <div>
+          <div class="relative overflow-hidden cursor-pointer bg-slate-950 p-4 border-b border-slate-800" onclick="openCertModal('assets/images/cert-java.jpg', 'Egyptian Science House - Programming Diploma (Java)')">
+            <img src="assets/images/cert-java.jpg" alt="Programming Diploma (Java)" class="w-full h-64 object-contain rounded-xl group-hover:scale-102 transition duration-300">
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 font-bold text-xs shadow-lg flex items-center gap-2">
+                <span>🔍 View Full Certificate</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">Grade: Excellent (امتياز)</span>
+              <span class="text-xs font-mono text-slate-500">Jan 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition" data-i18n="certs.c1.title">
+              Programming Diploma in Java
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="certs.c1.desc">
+              Certified by Egyptian Science House (بيت العلم المصري) for mastering object-oriented programming (OOP), enterprise Java architecture, and design patterns.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+          <span class="text-slate-400 font-mono">Issued: <strong class="text-slate-200">Jan 2026</strong></span>
+          <button onclick="openCertModal('assets/images/cert-java.jpg', 'Egyptian Science House - Programming Diploma (Java)')" class="text-emerald-400 hover:text-emerald-300 font-semibold font-mono">
+            Enlarge ↗
+          </button>
+        </div>
+      </div>
+
+      <!-- Certificate 3: Python (Egyptian Science House) -->
+      <div class="cert-card rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-emerald-500/40 transition group flex flex-col justify-between">
+        <div>
+          <div class="relative overflow-hidden cursor-pointer bg-slate-950 p-4 border-b border-slate-800" onclick="openCertModal('assets/images/cert-python.jpg', 'Egyptian Science House - Programming Diploma (Python)')">
+            <img src="assets/images/cert-python.jpg" alt="Programming Diploma (Python)" class="w-full h-64 object-contain rounded-xl group-hover:scale-102 transition duration-300">
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <span class="px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 font-bold text-xs shadow-lg flex items-center gap-2">
+                <span>🔍 View Full Certificate</span>
+              </span>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">Grade: Excellent (امتياز)</span>
+              <span class="text-xs font-mono text-slate-500">Jan 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition" data-i18n="certs.c2.title">
+              Programming Diploma in Python
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="certs.c2.desc">
+              Certified by Egyptian Science House (بيت العلم المصري) for excellence in advanced Python development, automated scripting, backend APIs, and data processing.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+          <span class="text-slate-400 font-mono">Issued: <strong class="text-slate-200">Jan 2026</strong></span>
+          <button onclick="openCertModal('assets/images/cert-python.jpg', 'Egyptian Science House - Programming Diploma (Python)')" class="text-emerald-400 hover:text-emerald-300 font-semibold font-mono">
+            Enlarge ↗
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills & Tech Stack Section -->
+  <section id="skills" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span data-i18n="skills.badge">Technical Arsenal</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="skills.title">
+        Tools, Frameworks &amp; Architecture
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-3" data-i18n="skills.desc">
+        A pragmatic technology stack chosen for speed, developer ergonomics, maintainability, and production stability.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Category 1: Frontend Engineering -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          🎨
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2" data-i18n="skills.cat1">Frontend Engineering</h3>
+        <p class="text-xs text-slate-400 mb-5 leading-relaxed" data-i18n="skills.cat1Desc">
+          Building fast, accessible, responsive user interfaces with attention to state management and core web vitals.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Redux / Zustand</span>
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">HTML5 / Modern CSS</span>
+        </div>
+      </div>
+
+      <!-- Category 2: Backend & Distributed Systems -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          ⚙️
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2" data-i18n="skills.cat2">Backend &amp; APIs</h3>
+        <p class="text-xs text-slate-400 mb-5 leading-relaxed" data-i18n="skills.cat2Desc">
+          Designing clean RESTful and GraphQL APIs, event-driven pipelines, secure authentication, and business logic.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-emerald-400 font-bold border-emerald-500/40">Java (Diploma)</span>
+          <span class="tech-tag text-emerald-400 font-bold border-emerald-500/40">Python (Diploma)</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">NestJS / Express</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">REST &amp; GraphQL</span>
+          <span class="tech-tag">Microservices</span>
+          <span class="tech-tag">WebSocket</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Cloud & Databases -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition">
+          ☁️
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2" data-i18n="skills.cat3">Cloud, DevOps &amp; Data</h3>
+        <p class="text-xs text-slate-400 mb-5 leading-relaxed" data-i18n="skills.cat3Desc">
+          Relational and NoSQL storage, containerization, CI/CD automated deployments, and resilient cloud architecture.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">AWS &amp; Cloudflare</span>
+          <span class="tech-tag">GitHub Actions CI/CD</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live GitHub Activity Section -->
+  <section id="github-activity" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8 sm:p-10 shadow-2xl">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span data-i18n="github.badge">Open Source &amp; Code Activity</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="github.title">
+            Live GitHub Ecosystem (@mohameddabah769-debug)
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1" data-i18n="github.desc">
+            Public repositories, active code commits, and software engineering contributions.
+          </p>
+        </div>
+        <a href="https://github.com/mohameddabah769-debug" target="_blank" class="shrink-0 px-5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 hover:border-emerald-500 text-white font-mono text-xs transition flex items-center gap-2">
+          <span>Follow on GitHub</span> ↗
+        </a>
+      </div>
+
+      <!-- GitHub Activity Stats Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+          <div class="text-xs font-mono text-slate-500 mb-1">PRIMARY STACK</div>
+          <div class="text-base font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> Python &amp; Java
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">Backend architectures &amp; APIs</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+          <div class="text-xs font-mono text-slate-500 mb-1">WEB ECOSYSTEM</div>
+          <div class="text-base font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span> TypeScript / React
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">Next.js &amp; Modern UI/UX</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+          <div class="text-xs font-mono text-slate-500 mb-1">INFRASTRUCTURE</div>
+          <div class="text-base font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span> Docker &amp; Cloud
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">CI/CD &amp; Automated Builds</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+          <div class="text-xs font-mono text-slate-500 mb-1">PROFILE STATUS</div>
+          <div class="text-base font-bold text-emerald-400 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span> Actively Shipping
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">Building new features daily</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="py-20 bg-slate-950/60 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span data-i18n="projects.badge">Case Studies</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="projects.title">
+            Featured Projects &amp; Systems
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2" data-i18n="projects.desc">
+            Handcrafted software solutions solving tangible problems with speed and precision.
+          </p>
+        </div>
+        
+        <!-- Filter pills -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium">
+          <button class="project-filter-btn active px-3.5 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-bold" data-filter="all">All</button>
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-filter="fullstack">Full-Stack</button>
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-filter="backend">Backend &amp; API</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="project-card group rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between" data-category="fullstack">
+          <div>
+            <!-- Visual Mockup Container -->
+            <div class="h-56 bg-gradient-to-br from-slate-900 to-slate-950 p-6 relative border-b border-slate-800 flex flex-col justify-between overflow-hidden">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">FinTech Platform</span>
+                <span class="text-xs font-mono text-slate-500">2024</span>
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition" data-i18n="projects.p1.title">
+                  ApexPay: High-Throughput Financial Ledger
+                </h3>
+              </div>
+              <div class="absolute -right-8 -bottom-10 w-44 h-44 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition"></div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6 space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="projects.p1.desc">
+                Architected a distributed ledger handling double-entry transactions with strict idempotency and zero data loss under peak loads of 12,000 requests/sec.
+              </p>
+              
+              <!-- Tech tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">NestJS</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Status: <span class="text-emerald-400">Production Ready</span></span>
+            <div class="flex items-center gap-3">
+              <a href="#contact" class="text-slate-300 hover:text-white font-semibold flex items-center gap-1">
+                <span data-i18n="projects.caseStudy">Case Study</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card group rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between" data-category="backend">
+          <div>
+            <div class="h-56 bg-gradient-to-br from-slate-900 to-slate-950 p-6 relative border-b border-slate-800 flex flex-col justify-between overflow-hidden">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">Cloud Infrastructure</span>
+                <span class="text-xs font-mono text-slate-500">2024</span>
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition" data-i18n="projects.p2.title">
+                  EdgePulse: Distributed API Gateway &amp; Telemetry
+                </h3>
+              </div>
+              <div class="absolute -right-8 -bottom-10 w-44 h-44 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition"></div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="projects.p2.desc">
+                High-performance edge reverse-proxy with built-in token-bucket rate limiting, OAuth2 authentication, and sub-10ms latency metrics gathering.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Go</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Cloudflare Workers</span>
+                <span class="tech-tag">Prometheus</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Status: <span class="text-indigo-400">Live Service</span></span>
+            <div class="flex items-center gap-3">
+              <a href="#contact" class="text-slate-300 hover:text-white font-semibold flex items-center gap-1">
+                <span data-i18n="projects.caseStudy">Case Study</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card group rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between" data-category="fullstack">
+          <div>
+            <div class="h-56 bg-gradient-to-br from-slate-900 to-slate-950 p-6 relative border-b border-slate-800 flex flex-col justify-between overflow-hidden">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">SaaS Platform</span>
+                <span class="text-xs font-mono text-slate-500">2023</span>
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition" data-i18n="projects.p3.title">
+                  LogiFlow: Fleet Logistics &amp; Real-Time Tracking
+                </h3>
+              </div>
+              <div class="absolute -right-8 -bottom-10 w-44 h-44 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition"></div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="projects.p3.desc">
+                Comprehensive logistics suite with real-time GPS fleet tracking via WebSockets, predictive route fuel optimization, and automated invoicing.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">FastAPI (Python)</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Mapbox</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Status: <span class="text-amber-400">Deployed</span></span>
+            <div class="flex items-center gap-3">
+              <a href="#contact" class="text-slate-300 hover:text-white font-semibold flex items-center gap-1">
+                <span data-i18n="projects.caseStudy">Case Study</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card group rounded-2xl border border-slate-800 bg-slate-900/80 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between" data-category="backend">
+          <div>
+            <div class="h-56 bg-gradient-to-br from-slate-900 to-slate-950 p-6 relative border-b border-slate-800 flex flex-col justify-between overflow-hidden">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-md border border-teal-500/20">Data Engineering</span>
+                <span class="text-xs font-mono text-slate-500">2023</span>
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white group-hover:text-teal-400 transition" data-i18n="projects.p4.title">
+                  StreamData: Real-Time Event Pipeline
+                </h3>
+              </div>
+              <div class="absolute -right-8 -bottom-10 w-44 h-44 bg-teal-500/10 rounded-full blur-2xl group-hover:bg-teal-500/20 transition"></div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="projects.p4.desc">
+                Streaming ingestion pipeline handling unstructured telemetry logs, automated schema validation, and real-time anomaly alerts for enterprise clients.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="tech-tag">Kafka</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Elasticsearch</span>
+                <span class="tech-tag">Kibana</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 mt-4 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Status: <span class="text-teal-400">Enterprise Active</span></span>
+            <div class="flex items-center gap-3">
+              <a href="#contact" class="text-slate-300 hover:text-white font-semibold flex items-center gap-1">
+                <span data-i18n="projects.caseStudy">Case Study</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience & Career Timeline -->
+  <section id="experience" class="py-20 md:py-28 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span data-i18n="exp.badge">Career Journey</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="exp.title">
+        Work Experience &amp; Impact
+      </h2>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative border-l-2 border-slate-800 rtl:border-l-0 rtl:border-r-2 rtl:border-slate-800 space-y-12 ml-4 rtl:ml-0 rtl:mr-4">
+      
+      <!-- Role 1 -->
+      <div class="relative pl-8 rtl:pl-0 rtl:pr-8 group">
+        <div class="absolute -left-[9px] rtl:-left-auto rtl:-right-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950 group-hover:scale-125 transition"></div>
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/20">2023 — Present</span>
+            <span class="text-xs text-slate-400">Full-Time / Enterprise</span>
+          </div>
+          <h3 class="text-xl font-bold text-white" data-i18n="exp.r1.title">Senior Software Engineer</h3>
+          <p class="text-sm font-semibold text-slate-300">Tech Systems &amp; Digital Solutions</p>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="exp.r1.desc">
+            Leading the technical design and deployment of high-concurrency microservices, mentoring junior engineers, and reducing server infrastructure costs by 32% through container orchestration and caching strategies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="relative pl-8 rtl:pl-0 rtl:pr-8 group">
+        <div class="absolute -left-[9px] rtl:-left-auto rtl:-right-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:scale-125 transition"></div>
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-semibold">2021 — 2023</span>
+            <span class="text-xs text-slate-400">Product Studio</span>
+          </div>
+          <h3 class="text-xl font-bold text-white" data-i18n="exp.r2.title">Full-Stack Software Engineer</h3>
+          <p class="text-sm font-semibold text-slate-300">Agile Cloud Solutions</p>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="exp.r2.desc">
+            Engineered customer-facing React &amp; Node.js applications, implemented end-to-end payment gateway integrations, and boosted Lighthouse performance scores from 58 to 96.
+          </p>
+        </div>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="relative pl-8 rtl:pl-0 rtl:pr-8 group">
+        <div class="absolute -left-[9px] rtl:-left-auto rtl:-right-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-800 border-4 border-slate-950 group-hover:scale-125 transition"></div>
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-400 font-semibold">2019 — 2021</span>
+            <span class="text-xs text-slate-400">Consultancy</span>
+          </div>
+          <h3 class="text-xl font-bold text-white" data-i18n="exp.r3.title">Software &amp; Web Developer</h3>
+          <p class="text-sm font-semibold text-slate-300">Digital Innovations Agency</p>
+          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="exp.r3.desc">
+            Developed bespoke web applications, automated data synchronization tasks using Python scripts, and authored clean technical documentation for clients across diverse industries.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Insights & Articles Section -->
+  <section id="articles" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span data-i18n="articles.badge">Engineering Insights</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="articles.title">
+          Technical Thoughts &amp; Architecture Notes
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2" data-i18n="articles.desc">
+          Articles on designing high-throughput systems, concurrency in Python and Java, and clean database engineering.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Article 1 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
+            <span>CONCURRENCY &amp; SCALE</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-3 leading-snug" data-i18n="articles.a1.title">
+            Scaling Python &amp; Java Backends to 10k+ Requests/Sec
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="articles.a1.desc">
+            A practical analysis of asynchronous event loops, thread pool executors in Java, and non-blocking I/O architectures to prevent worker starvation.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+          <span class="text-emerald-400 font-mono">Backend Engineering</span>
+          <span class="text-slate-400 group-hover:text-white transition">Read Note ↗</span>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
+            <span>DATABASE PERFORMANCE</span>
+            <span>4 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-3 leading-snug" data-i18n="articles.a2.title">
+            PostgreSQL Query Tuning: From 450ms Down to 28ms
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="articles.a2.desc">
+            How composite indexing, analyzing EXPLAIN ANALYZE execution trees, and selective Redis caching eliminated severe database bottlenecks.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+          <span class="text-amber-400 font-mono">Database Tuning</span>
+          <span class="text-slate-400 group-hover:text-white transition">Read Note ↗</span>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-emerald-500/40 transition flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
+            <span>ARCHITECTURE</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-3 leading-snug" data-i18n="articles.a3.title">
+            Designing Idempotent APIs with Zero Transaction Loss
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="articles.a3.desc">
+            Implementing idempotency keys, atomic distributed locks, and retry buffers for mission-critical financial and SaaS payment platforms.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+          <span class="text-indigo-400 font-mono">System Design</span>
+          <span class="text-slate-400 group-hover:text-white transition">Read Note ↗</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20 bg-slate-950/60 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-slate-800 bg-slate-900/80 p-8 sm:p-12 relative overflow-hidden">
+        <div class="space-y-6 relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+            <span data-i18n="about.badge">Engineering Philosophy</span>
+          </div>
+          <h2 class="text-3xl font-extrabold text-white" data-i18n="about.title">
+            Passionate About Architecture, Simplicity &amp; Speed
+          </h2>
+          <div class="text-slate-400 text-base leading-relaxed space-y-4">
+            <p data-i18n="about.p1">
+              I believe that great software isn't just about writing code that works — it's about building systems that are simple to understand, effortless to maintain, and resilient enough to adapt to tomorrow's growth.
+            </p>
+            <p data-i18n="about.p2">
+              Whether architecting a distributed backend service, optimizing database queries, or crafting an intuitive user experience, I focus on measurable quality: clean abstraction, thorough testing, and predictable performance.
+            </p>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4 text-xs font-mono text-slate-300">
+            <div class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span data-i18n="about.point1">Clean Architecture (SOLID)</span>
+            </div>
+            <div class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span data-i18n="about.point2">Automated CI/CD Pipelines</span>
+            </div>
+            <div class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span data-i18n="about.point3">High Availability &amp; Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Get In Touch Section -->
+  <section id="contact" class="py-20 md:py-28 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Contact Info -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span data-i18n="contact.badge">Let's Connect</span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="contact.title">
+          Have an upcoming project or engineering challenge?
+        </h2>
+        
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="contact.desc">
+          I'm always excited to discuss software architecture, new ventures, consulting opportunities, or full-stack development projects. Let's build something remarkable together.
+        </p>
+
+        <!-- Direct Contact Info Cards -->
+        <div class="space-y-4 pt-4">
+          
+          <!-- Email Card with Copy button -->
+          <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+                ✉️
+              </div>
+              <div>
+                <span class="block text-xs text-slate-500 font-mono" data-i18n="contact.emailLabel">DIRECT EMAIL</span>
+                <a href="mailto:mohameddabah769@gmail.com" class="text-sm font-semibold text-white hover:text-emerald-400 transition">
+                  mohameddabah769@gmail.com
+                </a>
+              </div>
+            </div>
+            <button id="copyEmailBtn" class="text-xs px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-300 font-mono transition" title="Copy Email">
+              Copy
+            </button>
+          </div>
+
+          <!-- WhatsApp Chat Card -->
+          <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+                💬
+              </div>
+              <div>
+                <span class="block text-xs text-slate-500 font-mono" data-i18n="contact.whatsappLabel">WHATSAPP CHAT</span>
+                <span class="text-sm font-semibold text-white">+20 109 574 4676</span>
+              </div>
+            </div>
+            <a href="https://wa.me/201095744676" target="_blank" rel="noreferrer" class="text-xs px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition flex items-center gap-1.5 shadow-md shadow-emerald-500/20">
+              <span>Open WhatsApp</span> ↗
+            </a>
+          </div>
+
+          <!-- Location Info -->
+          <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-slate-800 text-slate-400 flex items-center justify-center text-lg">
+              📍
+            </div>
+            <div>
+              <span class="block text-xs text-slate-500 font-mono" data-i18n="contact.locLabel">LOCATION</span>
+              <span class="text-sm font-semibold text-white" data-i18n="contact.locValue">Cairo, Egypt (Available Globally / Remote)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/90 p-8 sm:p-10 shadow-2xl relative">
+          <form id="contactForm" class="space-y-5">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-mono text-slate-400 mb-2" data-i18n="form.name">YOUR NAME *</label>
+                <input type="text" id="name" required placeholder="John Doe / محمد" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 text-sm transition">
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-mono text-slate-400 mb-2" data-i18n="form.email">YOUR EMAIL *</label>
+                <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 text-sm transition">
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-mono text-slate-400 mb-2" data-i18n="form.subject">PROJECT SUBJECT</label>
+              <input type="text" id="subject" placeholder="New Web Application / Architecture Consulting" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 text-sm transition">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-mono text-slate-400 mb-2" data-i18n="form.message">MESSAGE *</label>
+              <textarea id="message" rows="5" required placeholder="Tell me about your project, goals, and timeline..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 text-sm transition"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <span data-i18n="form.submit">Send Message</span>
+              <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </button>
+
+            <!-- Success notification box -->
+            <div id="formSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm text-center">
+              ✓ <span data-i18n="form.success">Thank you! Your message has been received. I'll get back to you within 24 hours.</span>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-10 bg-slate-950 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-mono font-bold text-emerald-400">&lt;MD/&gt;</span>
+        <span>© 2026 Mohamed Dabah. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#home" class="hover:text-slate-300 transition" data-i18n="nav.backToTop">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div id="toast" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono shadow-2xl flex items-center gap-2">
+    <span class="text-emerald-400">✓</span>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-3xl w-full bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+        <h3 id="certModalTitle" class="text-sm font-bold text-white truncate">Certificate Preview</h3>
+        <button onclick="closeCertModal()" class="p-1.5 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-mono">
+          ✕ Close
+        </button>
+      </div>
+      <div class="max-h-[75vh] overflow-auto rounded-xl bg-slate-950 p-2 flex items-center justify-center">
+        <img id="certModalImg" src="" alt="Certificate" class="max-w-full max-h-[70vh] object-contain rounded-lg">
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
